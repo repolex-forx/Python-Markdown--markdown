@@ -1,0 +1,17 @@
+[2026-09-19T20:55:33Z] === ENRICH ITERATION 1 START | repo=Python-Markdown/markdown sha=6e15290a ===
+[2026-09-19T20:55:33Z] [iter=1] PHASE START: enrich repo=Python-Markdown/markdown sha=6e15290a runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/6e15290a-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/6e15290aba4352451e432f2f1722a2ccb0088fee.nq.gz
+[2026-09-19T20:55:33Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-19T20:55:35Z] [iter=1] AST store loaded triples=324794 load_secs=2 mem_mb=553 MB
+[2026-09-19T20:55:35Z] [iter=1] Step 2: Finding LSP targets mem_mb=553 MB
+[2026-09-19T20:55:36Z] [iter=1] LSP targets found call_sites=2222 imports=0 extends=0 implements=0 secs=1
+[2026-09-19T20:55:37Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=553 MB
+[2026-09-19T20:55:39Z] [iter=1] Position index built positions=22920 nodes_with_types=29601 secs=2 mem_mb=553 MB
+[2026-09-19T20:55:39Z] [iter=1] Step 3: Starting LSP resolution mem_mb=553 MB already_completed_types=[] already_completed_files=0
+[2026-09-19T20:55:39Z] [iter=1] Resolving target type target_type=call_site count=2222
+[2026-09-19T20:56:05Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.5 files_done=5 resolved=199 errors=122 current=markdown/extensions/toc.py
+[2026-09-19T20:56:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.3 files_done=10 resolved=623 errors=342 current=markdown/extensions/meta.py
+[2026-09-19T20:57:21Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.8 files_done=19 resolved=1091 errors=449 current=markdown/extensions/abbr.py
+[2026-09-19T20:57:44Z] [iter=1] Target type resolved target_type=call_site resolved=1332 errors=560 secs=126 mem_mb=553 MB
+[2026-09-19T20:57:47Z] [iter=1] Step 5: Writing final enrichment file triples=21181
+[2026-09-19T20:57:48Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/6e15290aba4352451e432f2f1722a2ccb0088fee.nq.gz size_kb=387
+[2026-09-19T20:57:48Z] [iter=1] PHASE END: enrich elapsed_s=135 elapsed_min=2.2 total_triples=21181
