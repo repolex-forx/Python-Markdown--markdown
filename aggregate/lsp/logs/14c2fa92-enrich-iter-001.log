@@ -1,0 +1,20 @@
+[2026-09-19T12:25:00Z] === ENRICH ITERATION 1 START | repo=Python-Markdown/markdown sha=14c2fa92 ===
+[2026-09-19T12:25:00Z] [iter=1] PHASE START: enrich repo=Python-Markdown/markdown sha=14c2fa92 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/14c2fa92-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/14c2fa92302084e4850e5323ed56721e43fbbdb9.nq.gz
+[2026-09-19T12:25:00Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-19T12:25:08Z] [iter=1] AST store loaded triples=516983 load_secs=8 mem_mb=826 MB
+[2026-09-19T12:25:08Z] [iter=1] Step 2: Finding LSP targets mem_mb=826 MB
+[2026-09-19T12:25:08Z] [iter=1] LSP targets found call_sites=3831 imports=0 extends=0 implements=0 secs=1
+[2026-09-19T12:25:09Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=826 MB
+[2026-09-19T12:25:10Z] [iter=1] Position index built positions=36832 nodes_with_types=47749 secs=1 mem_mb=826 MB
+[2026-09-19T12:25:10Z] [iter=1] Step 3: Starting LSP resolution mem_mb=826 MB already_completed_types=[] already_completed_files=0
+[2026-09-19T12:25:10Z] [iter=1] Resolving target type target_type=call_site count=3831
+[2026-09-19T12:25:35Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=2 resolved=293 errors=217 current=tests/test_syntax/blocks/test_html_blocks.py
+[2026-09-19T12:26:20Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.3 files_done=5 resolved=366 errors=657 current=markdown/treeprocessors.py
+[2026-09-19T12:26:54Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.9 files_done=14 resolved=741 errors=925 current=markdown/core.py
+[2026-09-19T12:27:28Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.5 files_done=22 resolved=867 errors=1234 current=tests/test_extensions.py
+[2026-09-19T12:27:59Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.0 files_done=32 resolved=1040 errors=1513 current=tests/test_syntax/inline/test_links.py
+[2026-09-19T12:28:29Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.5 files_done=49 resolved=1465 errors=1765 current=tests/test_syntax/extensions/test_admonition.py
+[2026-09-19T12:28:40Z] [iter=1] Target type resolved target_type=call_site resolved=1512 errors=1836 secs=210 mem_mb=826 MB
+[2026-09-19T12:28:42Z] [iter=1] Step 5: Writing final enrichment file triples=31570
+[2026-09-19T12:28:42Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/14c2fa92302084e4850e5323ed56721e43fbbdb9.nq.gz size_kb=614
+[2026-09-19T12:28:42Z] [iter=1] PHASE END: enrich elapsed_s=222 elapsed_min=3.7 total_triples=31570
