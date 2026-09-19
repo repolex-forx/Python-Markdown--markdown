@@ -1,0 +1,32 @@
+[2026-09-19T01:16:09Z] === ENRICH ITERATION 1 START | repo=Python-Markdown/markdown sha=b34e1d03 ===
+[2026-09-19T01:16:09Z] [iter=1] PHASE START: enrich repo=Python-Markdown/markdown sha=b34e1d03 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/b34e1d03-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/b34e1d03387be771aa626241fe56f8f0c34243f2.nq.gz
+[2026-09-19T01:16:18Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=80 MB
+[2026-09-19T01:16:24Z] [iter=1] AST store loaded triples=607549 load_secs=5 mem_mb=821 MB
+[2026-09-19T01:16:24Z] [iter=1] Step 2: Finding LSP targets mem_mb=821 MB
+[2026-09-19T01:16:25Z] [iter=1] LSP targets found call_sites=4159 imports=122 extends=73 implements=0 secs=1
+[2026-09-19T01:16:26Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=821 MB
+[2026-09-19T01:16:28Z] [iter=1] Position index built positions=43228 nodes_with_types=56094 secs=2 mem_mb=821 MB
+[2026-09-19T01:16:28Z] [iter=1] Step 3: Starting LSP resolution mem_mb=821 MB already_completed_types=[] already_completed_files=0
+[2026-09-19T01:16:28Z] [iter=1] Resolving target type target_type=call_site count=4159
+[2026-09-19T01:16:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=1 resolved=176 errors=79 current=tests/test_syntax/blocks/test_html_blocks.py
+[2026-09-19T01:17:32Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.4 files_done=2 resolved=177 errors=320 current=markdown/extensions/abbr.py
+[2026-09-19T01:18:54Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.8 files_done=7 resolved=422 errors=745 current=markdown/blockprocessors.py
+[2026-09-19T01:19:25Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.3 files_done=8 resolved=470 errors=906 current=markdown/extensions/md_in_html.py
+[2026-09-19T01:20:11Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.0 files_done=12 resolved=630 errors=1140 current=tests/test_syntax/extensions/test_md_in_html.py
+[2026-09-19T01:20:45Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.6 files_done=13 resolved=634 errors=1321 current=tests/test_syntax/inline/test_code.py
+[2026-09-19T01:21:18Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.2 files_done=15 resolved=635 errors=1498 current=tests/test_syntax/extensions/test_abbr.py
+[2026-09-19T01:21:53Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.7 files_done=19 resolved=716 errors=1678 current=tests/test_syntax/extensions/test_fenced_code.py
+[2026-09-19T01:22:30Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.4 files_done=22 resolved=879 errors=1871 current=markdown/util.py
+[2026-09-19T01:23:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.9 files_done=27 resolved=977 errors=2034 current=markdown/htmlparser.py
+[2026-09-19T01:23:32Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.4 files_done=31 resolved=1062 errors=2192 current=markdown/test_tools.py
+[2026-09-19T01:24:06Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.9 files_done=37 resolved=1109 errors=2372 current=tests/test_syntax/extensions/test_smarty.py
+[2026-09-19T01:24:42Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=8.6 files_done=45 resolved=1181 errors=2556 current=tests/test_syntax/extensions/test_legacy_attrs.py
+[2026-09-19T01:25:13Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=9.1 files_done=58 resolved=1229 errors=2710 current=markdown/blockparser.py
+[2026-09-19T01:25:24Z] [iter=1] Target type resolved target_type=call_site resolved=1237 errors=2765 secs=535 mem_mb=821 MB
+[2026-09-19T01:25:24Z] [iter=1] Resolving target type target_type=import_statement count=122
+[2026-09-19T01:25:25Z] [iter=1] Target type resolved target_type=import_statement resolved=118 errors=0 secs=2 mem_mb=821 MB
+[2026-09-19T01:25:25Z] [iter=1] Resolving target type target_type=extends_clause count=73
+[2026-09-19T01:25:27Z] [iter=1] Target type resolved target_type=extends_clause resolved=71 errors=0 secs=1 mem_mb=821 MB
+[2026-09-19T01:25:30Z] [iter=1] Step 5: Writing final enrichment file triples=38759
+[2026-09-19T01:25:31Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/b34e1d03387be771aa626241fe56f8f0c34243f2.nq.gz size_kb=801
+[2026-09-19T01:25:31Z] [iter=1] PHASE END: enrich elapsed_s=562 elapsed_min=9.4 total_triples=38759
