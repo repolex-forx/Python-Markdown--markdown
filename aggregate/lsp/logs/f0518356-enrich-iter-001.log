@@ -1,0 +1,15 @@
+[2026-09-21T03:14:46Z] === ENRICH ITERATION 1 START | repo=Python-Markdown/markdown sha=f0518356 ===
+[2026-09-21T03:14:46Z] [iter=1] PHASE START: enrich repo=Python-Markdown/markdown sha=f0518356 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/f0518356-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/f05183566eb57e1828926d7dcc89356fb8237df3.nq.gz
+[2026-09-21T03:14:46Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-21T03:14:47Z] [iter=1] AST store loaded triples=201593 load_secs=1 mem_mb=360 MB
+[2026-09-21T03:14:47Z] [iter=1] Step 2: Finding LSP targets mem_mb=360 MB
+[2026-09-21T03:14:48Z] [iter=1] LSP targets found call_sites=1453 imports=0 extends=0 implements=0 secs=1
+[2026-09-21T03:14:48Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=360 MB
+[2026-09-21T03:14:49Z] [iter=1] Position index built positions=14140 nodes_with_types=18246 secs=1 mem_mb=360 MB
+[2026-09-21T03:14:49Z] [iter=1] Step 3: Starting LSP resolution mem_mb=360 MB already_completed_types=[] already_completed_files=0
+[2026-09-21T03:14:49Z] [iter=1] Resolving target type target_type=call_site count=1453
+[2026-09-21T03:15:17Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.5 files_done=8 resolved=385 errors=145 current=markdown/extensions/toc.py
+[2026-09-21T03:15:48Z] [iter=1] Target type resolved target_type=call_site resolved=783 errors=370 secs=58 mem_mb=360 MB
+[2026-09-21T03:15:50Z] [iter=1] Step 5: Writing final enrichment file triples=12885
+[2026-09-21T03:15:50Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/f05183566eb57e1828926d7dcc89356fb8237df3.nq.gz size_kb=226
+[2026-09-21T03:15:50Z] [iter=1] PHASE END: enrich elapsed_s=64 elapsed_min=1.1 total_triples=12885
