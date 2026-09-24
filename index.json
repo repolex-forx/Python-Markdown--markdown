@@ -3,6 +3,11 @@
   "repo": "markdown",
   "versions": [
     {
+      "commit": "c84c8280cd71aef3191529ba286ebe85714365b2",
+      "tag": "2.0-Final",
+      "parsed_at": "2026-09-24T12:55:45.987109+00:00"
+    },
+    {
       "commit": "5cee3a1f7b74029b3b77b2c48f757b4afd49bd1f",
       "tag": "2.0-alpha",
       "parsed_at": "2026-09-22T12:18:04.091323+00:00"
