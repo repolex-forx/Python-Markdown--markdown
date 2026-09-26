@@ -6,29 +6,27 @@ RDF knowledge graph data for [Python-Markdown/markdown](https://github.com/Pytho
 
 ## How to use this data
 
-The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you have uv installed, just copy/paste this into your terminal:
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
 
 ```bash
-uv tool install git+https://github.com/repolex-ai/lexq
+cargo install --git https://github.com/repolex-ai/rlex
 ```
 
-This installs lexq onto your system, in your user context. Verify the install:
+Verify the install:
 
 ```bash
-lexq --help
+rlex --help
 ```
 
-**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
 
 To load this repo's data:
 
 ```bash
-lexq download Python-Markdown/markdown
+rlex download Python-Markdown/markdown
 ```
 
-This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
 
 ## Data structure
 
@@ -77,6 +75,8 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   ├── 4ecbf34d7762d414bd6b027e37568693d05571fb
 │   │   │   └── chunk-001.nq.gz
 │   │   ├── 4f0b91abe1a954a72ab3c99c3e2b880ab36631fa
+│   │   │   └── chunk-001.nq.gz
+│   │   ├── 4f63b9542f360d25cbcc7195c35f47c1baaf4b07
 │   │   │   └── chunk-001.nq.gz
 │   │   ├── 54a00d12c03ab3c05ffb57f5797b96b31b6d894f
 │   │   │   └── chunk-001.nq.gz
@@ -187,6 +187,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   ├── 4e8cbad5ec60806393d0df05419aad33b67bbc73.nq.gz
 │   │   ├── 4ecbf34d7762d414bd6b027e37568693d05571fb.nq.gz
 │   │   ├── 4f0b91abe1a954a72ab3c99c3e2b880ab36631fa.nq.gz
+│   │   ├── 4f63b9542f360d25cbcc7195c35f47c1baaf4b07.nq.gz
 │   │   ├── 54a00d12c03ab3c05ffb57f5797b96b31b6d894f.nq.gz
 │   │   ├── 56b03b21f50d2b28b7ab87df7d8015e1f1b62184.nq.gz
 │   │   ├── 58b4d64db00ef50c090a9da4bc303c5e840c5c9f.nq.gz
@@ -271,6 +272,8 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │       ├── 4ecbf34d7762d414bd6b027e37568693d05571fb
 │       │   └── chunk-001.nq.gz
 │       ├── 4f0b91abe1a954a72ab3c99c3e2b880ab36631fa
+│       │   └── chunk-001.nq.gz
+│       ├── 4f63b9542f360d25cbcc7195c35f47c1baaf4b07
 │       │   └── chunk-001.nq.gz
 │       ├── 54a00d12c03ab3c05ffb57f5797b96b31b6d894f
 │       │   └── chunk-001.nq.gz
@@ -365,12 +368,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 00445ecad4bced3b453913aef08d54032be4d93b.nq.gz
     ├── 00668674ab4fee632b17b86347992c9378b330dc.nq.gz
     ├── 009a39d465030a1bf95b64047870a10e7754cfb5.nq.gz
-    ├── 00c330f1f05f0a8cc155fb716d6ea59027820da3.nq.gz
-    ├── 00c7b5e1b2bdcfd7c87b0f80df924728213e9a53.nq.gz
-    ├── 010e310c3671b48aa8419e15386e02c3ad84508c.nq.gz
-    └── 0125b6320237fdc466914e1880edd11251d13cd9.nq.gz
+    └── 00c330f1f05f0a8cc155fb716d6ea59027820da3.nq.gz
 
-134 directories, 200 files
+136 directories, 200 files
 ```
 
 | Directory | What it contains |
@@ -384,10 +384,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 | `branch/` | Branch metadata. |
 | `tag/` | Tag metadata. |
 | `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
 
 ## Source repository
 
 [Python-Markdown/markdown](https://github.com/Python-Markdown/markdown)
 
 ---
-*Parsed on 2026-09-24 by [repolex](https://repolex.ai)*
+*Parsed on 2026-09-26 by [repolex](https://repolex.ai)*
